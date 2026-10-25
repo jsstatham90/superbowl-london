@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Super Bowl LXI in London: watch plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f3f5f7;--card:#ffffff;--text:#13202b;--muted:#5d6a74;--line:#dde3e8;--accent:#1c6a50;--accent-soft:#e3f2ec;
+  --gb:#e1f2ea;--gf:#0d5740;--gl:#9ccfb8;
+  --bb:#e3edf9;--bf:#12467f;--bl:#a6c4e8;
+  --ab:#fbefd6;--af:#74470a;--al:#ecc681;
+  --rb:#fbe5e5;--rf:#8c2727;--rl:#eca8a8;
+  --shadow:0 1px 2px rgba(19,32,43,.06),0 4px 14px rgba(19,32,43,.05);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10181f;--card:#18232c;--text:#e8eef2;--muted:#9eaeb9;--line:#2b3a46;--accent:#6fd0ad;--accent-soft:#163a2e;
+    --gb:#163a2e;--gf:#a4e4cb;--gl:#2d6a55;
+    --bb:#142f4b;--bf:#b0d0f3;--bl:#2c5886;
+    --ab:#40300f;--af:#f1cd8c;--al:#775820;
+    --rb:#471b1b;--rf:#f3b2b2;--rl:#873a3a;
+    --shadow:0 1px 2px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10181f;--card:#18232c;--text:#e8eef2;--muted:#9eaeb9;--line:#2b3a46;--accent:#6fd0ad;--accent-soft:#163a2e;
+  --gb:#163a2e;--gf:#a4e4cb;--gl:#2d6a55;
+  --bb:#142f4b;--bf:#b0d0f3;--bl:#2c5886;
+  --ab:#40300f;--af:#f1cd8c;--al:#775820;
+  --rb:#471b1b;--rf:#f3b2b2;--rl:#873a3a;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#091c38;z-index:10}
+main{max-width:720px;margin:0 auto;padding:28px 18px 56px}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;font-weight:600;line-height:1.08;margin:0}
+h1{font-size:clamp(38px,9vw,56px);font-weight:700;letter-spacing:.2px}
+h2{font-size:30px;margin:36px 0 8px}
+h3{font-size:22px}
+p{margin:0 0 12px}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lede{font-size:18px;color:var(--muted);max-width:56ch;margin:12px 0 0}
+.note{font-size:14.5px;color:var(--muted);margin:0 0 16px;max-width:64ch}
+
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin:26px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fact{padding:14px 14px 14px 0}
+.fact+.fact{padding-left:16px;border-left:1px solid var(--line)}
+.fact b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:24px;font-weight:600;line-height:1.1}
+.fact span{display:block;font-size:13.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+@media (max-width:520px){.facts{grid-template-columns:1fr}.fact,.fact+.fact{padding:12px 0;border-left:0}.fact+.fact{border-top:1px solid var(--line)}}
+.brief{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.brief li{background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:500}
+
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;display:flex;align-items:flex-end;gap:6px;overflow-x:auto;margin:26px -18px 0;padding:10px 14px 18px;scrollbar-width:none;counter-reset:t;
+  background-image:
+    linear-gradient(#d62839,#d62839),
+    linear-gradient(#ffffff,#ffffff),
+    linear-gradient(#d62839,#d62839),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 2px,transparent 2px 46px),
+    linear-gradient(#0e2a52,#091c38);
+  background-size:100% 3px,100% 3px,100% 3px,auto,auto;
+  background-position:0 100%,0 calc(100% - 3px),0 calc(100% - 6px),0 0,0 0;
+  background-repeat:no-repeat,no-repeat,no-repeat,repeat,no-repeat}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;font-family:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.8px;text-transform:uppercase;line-height:1;padding:11px 16px 10px;border:2px solid transparent;border-radius:8px;background:transparent;color:rgba(255,255,255,.78);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.tabs button::before{counter-increment:t;content:counter(t);display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;border-radius:50%;border:1.5px solid currentColor;font-size:14px;letter-spacing:0;opacity:.85}
+.tabs button[aria-selected="true"]{background:#ffffff;color:#0e2a52;border-color:#ffffff;box-shadow:0 2px 0 #d62839}
+.tabs button[aria-selected="true"]::before{background:#d62839;border-color:#d62839;color:#ffffff;opacity:1}
+.tabs button:focus-visible{outline:2px solid #ffffff;outline-offset:2px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin:26px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fact{padding:14px 14px 14px 0}
+.fact+.fact{padding-left:16px;border-left:1px solid var(--line)}
+.fact b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:24px;font-weight:600;line-height:1.1}
+.fact span{display:block;font-size:13.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+@media (max-width:520px){.facts{grid-template-columns:1fr}.fact,.fact+.fact{padding:12px 0;border-left:0}.fact+.fact{border-top:1px solid var(--line)}}
+.brief{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.brief li{background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:500}
+
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid var(--line);margin:26px -18px 0;padding:0 14px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;font-weight:600;font-size:16px;line-height:1;padding:16px 14px 14px;border:0;background:none;color:var(--muted);border-bottom:3px solid transparent;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--text);border-bottom-color:var(--accent)}
+
+.c{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid;white-space:nowrap}
+.g{background:var(--gb);color:var(--gf);border-color:var(--gl)}
+.b{background:var(--bb);color:var(--bf);border-color:var(--bl)}
+.a{background:var(--ab);color:var(--af);border-color:var(--al)}
+.r{background:var(--rb);color:var(--rf);border-color:var(--rl)}
+.x{background:var(--card);color:var(--muted);border-color:var(--line)}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+
+.btn{font-weight:600;font-size:14.5px;border:1px solid var(--line);background:var(--card);color:var(--text);padding:9px 15px;border-radius:10px;cursor:pointer;min-height:42px}
+.btn.pri{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.btn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.chipbtn{font-weight:500;font-size:14.5px;border:1px solid var(--line);background:var(--card);color:var(--text);padding:8px 14px;border-radius:999px;cursor:pointer;min-height:42px}
+.chipbtn[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.ctrls{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.seg button{border:0;background:none;color:var(--muted);font-weight:600;font-size:14.5px;padding:9px 16px;cursor:pointer;min-height:42px}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
+.count{font-size:14px;color:var(--muted);margin:0 0 12px}
+
+.rk{flex:none;width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;line-height:1}
+.t-gold{background:#e6b11c;color:#2a1f00}
+.t-silver{background:#bec6ce;color:#1e262e}
+.t-bronze{background:#b8733c;color:#fff}
+.t-hotel{background:#584cbe;color:#fff}
+.hb-g{background:#2f8f66;color:#fff}
+.hb-a{background:#e0a21a;color:#2a1f00}
+.hb-r{background:#c0392b;color:#fff}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chips .chipbtn{font-size:14px;padding:6px 13px;min-height:38px}
+.chips .chipbtn.ghost{background:none;border-style:dashed;color:var(--muted)}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px 2px;margin-bottom:10px;box-shadow:var(--shadow)}
+.cat h3{margin-bottom:0;font-size:20px}
+.cat .cb{font-size:13.5px;color:var(--muted);margin:0 0 6px}
+.cit{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;padding:9px 0;border:0;border-top:1px solid var(--line);background:none;font:inherit;color:inherit;cursor:pointer}
+.cit .num{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:16px}
+.cit strong{display:block;font-size:15.5px;font-weight:600;line-height:1.3}
+.cit span.why{display:block;font-size:14px;color:var(--muted);line-height:1.4}
+.cit .go{font-size:13px;font-weight:600;color:var(--accent)}
+.picks{display:grid;gap:12px;margin-top:4px}
+.pick{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+.pick h3{margin-bottom:4px}
+.pick p{margin:0 0 6px;font-size:15px;color:var(--muted)}
+.pick .go{font-size:14px;font-weight:600;color:var(--accent)}
+
+.vc,.hc{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;box-shadow:var(--shadow);scroll-margin-top:calc(env(safe-area-inset-top,0px) + 70px)}
+.vh{display:flex;align-items:stretch}
+.vtoggle{flex:1;display:flex;align-items:center;gap:12px;text-align:left;padding:14px;border:0;background:none;color:var(--text);cursor:pointer;font:inherit;min-width:0;border-radius:14px 0 0 14px}
+.vm{flex:1;min-width:0}
+.vm strong{display:block;font-size:16.5px;line-height:1.25;font-weight:600}
+.vm .ar{font-size:13.5px;color:var(--muted);display:block;margin-top:1px}
+.chev{color:var(--muted);font-size:12px}
+.savebtn{border:0;border-left:1px solid var(--line);background:none;color:var(--muted);padding:0 16px;font-weight:600;font-size:14px;cursor:pointer;border-radius:0 14px 14px 0;min-width:78px}
+.savebtn[aria-pressed="true"]{color:var(--accent)}
+.vp{padding:4px 16px 16px;border-top:1px solid var(--line)}
+.vp .line{font-size:15.5px;margin:12px 0}
+.pc{display:grid;gap:14px;margin:12px 0}
+.pc h4{margin:0 0 6px;font-weight:600;font-size:13.5px;color:var(--muted)}
+.pc ul{margin:0;padding-left:18px;font-size:15px}
+.pc li{margin-bottom:3px}
+.chips2{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.c.pg{background:var(--gb);color:var(--gf);border-color:var(--gl)}
+.c.pa{background:var(--ab);color:var(--af);border-color:var(--al)}
+.c.pr{background:var(--rb);color:var(--rf);border-color:var(--rl)}
+.c.px{background:var(--card);color:var(--muted);border-color:var(--line)}
+.pbox{border-radius:10px;padding:10px 14px;margin:12px 0;border:1px solid var(--line);background:var(--card)}
+.pbox h4{margin:0 0 4px;font-weight:600;font-size:13.5px;color:var(--muted)}
+.pbox p{margin:0;font-size:15px}
+.pb-g{background:var(--gb);border-color:var(--gl)}
+.pb-a{background:var(--ab);border-color:var(--al)}
+.pb-r{background:var(--rb);border-color:var(--rl)}
+.ly{background:var(--ab);border:1px solid var(--al);border-radius:10px;padding:10px 14px;margin:12px 0}
+.ly h4{margin:0 0 6px;font-weight:600;font-size:13.5px;color:var(--af)}
+.ly ul{margin:0;padding-left:18px;font-size:14.5px}
+.ly li{margin-bottom:3px}
+.ask{font-size:14.5px;background:var(--accent-soft);border-radius:10px;padding:10px 12px;margin:12px 0 0}
+@media (min-width:560px){.pc{grid-template-columns:1fr 1fr}}
+
+.hc{padding:16px}
+.hh{display:flex;align-items:center;gap:12px}
+.hh strong{flex:1;font-size:16.5px;line-height:1.25;font-weight:600}
+.hc .addr{font-size:13.5px;color:var(--muted);margin:4px 0 10px 46px}
+.hc p{font-size:15px;margin:0 0 6px 46px}
+.hc .actions{margin:12px 0 0 46px;display:flex;gap:8px;flex-wrap:wrap}
+
+.mapwrap{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+#gframe{display:block;width:100%;height:min(76vh,720px);min-height:440px;border:0}
+.key{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 14px;padding:0;list-style:none;font-size:14px;color:var(--muted)}
+.key li{display:flex;align-items:center;gap:7px}
+.dot{width:16px;height:16px;border-radius:50%;display:inline-block}
+.dot.sq{border-radius:4px}
+
+.short{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.short li{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.short li span.nm{flex:1;min-width:140px;font-weight:600}
+.empty{font-size:15px;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:16px}
+
+.two{display:grid;gap:14px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+.box h3{margin-bottom:8px}
+.box ul{margin:0;padding-left:20px}
+.box li{margin-bottom:6px;font-size:15px}
+.checks{list-style:none;margin:0!important;padding:0!important}
+.checks li{margin:0}
+.checks label{display:flex;gap:12px;align-items:flex-start;padding:8px 0;font-size:15px;cursor:pointer}
+.checks input{width:20px;height:20px;margin-top:2px;accent-color:var(--accent);flex:none}
+.src{font-size:13.5px;color:var(--muted);line-height:1.65}
+footer{margin-top:36px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (min-width:680px){.two{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Where to watch Super Bowl LXI in London</h1>
+  <p class="lede">A shortlist for two to four people who want beer until late, sharing plates, a seat if possible, and a short trip back to a hotel near London Bridge. Built from the 2025 and 2026 listings, because 2027 ones aren’t out yet.</p>
+  <div class="facts">
+    <div class="fact"><b>Sun 14 Feb 2027</b><span>Super Bowl LXI</span></div>
+    <div class="fact"><b>11:30pm kickoff</b><span>UK time, 6:30pm Eastern</span></div>
+    <div class="fact"><b>Done around 3am</b><span>Check each venue’s closing time</span></div>
+  </div>
+  <ul class="brief" aria-label="Your brief">
+    <li>2 to 4 people</li><li>Not party-led</li><li>Seats ideally guaranteed</li><li>Sharing plates or wings</li><li>Under £15 each to book</li><li>One hotel room under £70</li>
+  </ul>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Sections">
+  <button role="tab" id="tab-plan" aria-controls="panel-plan" aria-selected="true" data-act="tab" data-tab="plan">Plan</button>
+  <button role="tab" id="tab-venues" aria-controls="panel-venues" aria-selected="false" tabindex="-1" data-act="tab" data-tab="venues">Venues</button>
+  <button role="tab" id="tab-map" aria-controls="panel-map" aria-selected="false" tabindex="-1" data-act="tab" data-tab="map">Map</button>
+  <button role="tab" id="tab-hotels" aria-controls="panel-hotels" aria-selected="false" tabindex="-1" data-act="tab" data-tab="hotels">Hotels</button>
+  <button role="tab" id="tab-checklist" aria-controls="panel-checklist" aria-selected="false" tabindex="-1" data-act="tab" data-tab="checklist">Checklist</button>
+</nav>
+
+<noscript><p class="note" style="margin-top:16px">This page needs JavaScript for its tabs. Please turn it on.</p></noscript>
+
+<section id="panel-plan" role="tabpanel" aria-labelledby="tab-plan">
+  <h2>Top three, six ways</h2>
+  <p class="note">The top three venues for six different things, taken from last year’s listings. Tap the boxes to switch each list on or off. “Overall” is my best fit for your whole brief. Tap any venue to see its details.</p>
+  <div class="chips" id="catchips" role="group" aria-label="Choose which top-three lists to show"></div>
+  <div id="cats"></div>
+
+  <h2>Your shortlist</h2>
+  <div id="shortlist"></div>
+  <p class="note" style="margin-top:12px">Saved picks and ticks stay in this browser only.</p>
+</section>
+
+<section id="panel-venues" role="tabpanel" aria-labelledby="tab-venues" hidden>
+  <h2>All venues</h2>
+  <p class="note">Tap a venue to open it. Amber boxes show details taken from last year’s listings, which may change for 2027. Distance is straight-line miles from London Bridge station, approximate.</p>
+  <div class="legend" aria-label="Distance key"><span class="c g">Under 1.5 mi</span><span class="c b">1.5 to 3</span><span class="c a">3 to 5</span><span class="c r">Over 5</span></div>
+  <div class="legend" aria-label="Price key"><span class="c pg">£15 or less</span><span class="c pa">£15 to £30</span><span class="c pr">Over £30</span><span class="c px">No ticket price listed</span></div>
+  <div class="ctrls" id="filters" role="group" aria-label="Filters">
+    <button class="chipbtn" aria-pressed="false" data-act="filter" data-f="walk">Under 1.5 mi</button>
+    <button class="chipbtn" aria-pressed="false" data-act="filter" data-f="seat">Seat or table on offer</button>
+    <button class="chipbtn" aria-pressed="false" data-act="filter" data-f="price">Price listed £15 or less</button>
+    <button class="chipbtn" aria-pressed="false" data-act="filter" data-f="late">Open past 3am</button>
+  </div>
+  <div class="ctrls">
+    <div class="seg" role="group" aria-label="Sort order">
+      <button aria-pressed="true" data-act="sort" data-s="fit">Best fit</button>
+      <button aria-pressed="false" data-act="sort" data-s="near">Nearest</button>
+    </div>
+  </div>
+  <p class="count" id="vcount" aria-live="polite"></p>
+  <div id="vlist"></div>
+  <p class="note" style="margin-top:14px">Left out as party-led: Boxpark, Big Penny Social, The 411, The Prince, Ministry of Sound, Hard Rock Cafe, Passyunk Avenue, Bat &amp; Ball and Flat Iron Square. They are on the map in grey.</p>
+</section>
+
+<section id="panel-map" role="tabpanel" aria-labelledby="tab-map" hidden>
+  <h2>Map</h2>
+  <ul class="key" aria-label="Map key">
+    <li><span class="dot" style="background:#e6b11c"></span>Gold, ranks 1 to 4</li>
+    <li><span class="dot" style="background:#bec6ce"></span>Silver, 5 to 10</li>
+    <li><span class="dot" style="background:#b8733c"></span>Bronze, 11 to 16</li>
+    <li><span class="dot sq" style="background:#584cbe"></span>Hotels</li>
+    <li><span class="dot" style="background:#8a9198"></span>Party-led</li>
+    <li><span class="dot" style="background:#148c96"></span>Not graded</li>
+  </ul>
+  <div class="mapwrap">
+    <iframe id="gframe" title="Google My Maps: Super Bowl London venues and hotels" src="https://www.google.com/maps/d/embed?mid=1fJ3k432Hms_h2G_eIkBwIQWj1Nq4vAY&amp;ehbc=2E312F" allowfullscreen></iframe>
+  </div>
+  <p class="note" style="margin-top:12px">Pin positions are estimates and may be a few hundred metres out.</p>
+</section>
+
+<section id="panel-hotels" role="tabpanel" aria-labelledby="tab-hotels" hidden>
+  <h2>Hotels near London Bridge</h2>
+  <p class="note">All eight hotels, ranked for one room under £70 and a short walk to London Bridge. The colour shows the price band, based on the lowest price listed, except Bankside, where I have actual Sunday rates. Prices are the cheapest “from” rates seen on comparison sites in October 2026, on assorted dates. None is a quote for 14 February 2027, and some sources mixed currencies. Check the hotel’s own site for your night.</p>
+  <div class="legend" aria-label="Price key"><span class="c g">Under £70</span><span class="c a">£70 to £89</span><span class="c r">£90 and over</span></div>
+  <div class="legend" aria-label="Walk key"><span class="c g">Up to 0.4 mi</span><span class="c b">0.4 to 0.6</span><span class="c a">Over 0.6</span></div>
+  <div class="ctrls">
+    <button class="chipbtn" id="u70btn" aria-pressed="false" data-act="u70">Hide hotels over £70</button>
+  </div>
+  <p class="count" id="hcount" aria-live="polite"></p>
+  <div id="hlist"></div>
+</section>
+
+<section id="panel-checklist" role="tabpanel" aria-labelledby="tab-checklist" hidden>
+  <h2>Before you book</h2>
+  <div class="two">
+    <div class="box"><h3>Ask each venue</h3><ul class="checks" id="chk-venue"></ul></div>
+    <div class="box"><h3>Your to-do list</h3><ul class="checks" id="chk-todo"></ul></div>
+  </div>
+  <h2>What I couldn’t confirm</h2>
+  <div class="box">
+    <ul>
+      <li>No 2027 listings were out in October 2026, apart from The Dial’s weekly NFL watch party, which runs to 14 February.</li>
+      <li>No venue publishes real Super Bowl attendance, so there are no headcounts here.</li>
+      <li>Hotel prices for 14 February 2027 weren’t available.</li>
+      <li>Distances and pin positions are approximate.</li>
+    </ul>
+  </div>
+  <h2>Sources</h2>
+  <p class="src">Time Out London (2 Feb 2026 and 2025 guides), Shortlist (6 Feb 2026), London On The Inside (Jan 2026), Secret London (Feb 2025), Londonist, London Cheapo, DesignMyNight, Visit Greenwich, venue pages for Clapham Grand, The Dial and BrewDog Waterloo, CAMRA, and Big Penny Social’s venue listings for capacity. Hotel prices come from Tripadvisor, trivago and KAYAK listings. Everything here reflects what those pages said when I read them in October 2026.</p>
+</section>
+
+<footer>Prepared 25 October 2026 for Super Bowl LXI, Sunday 14 February 2027. Check every venue and hotel directly before paying.</footer>
+</main>
+
+<script>
+(function(){
+var V=[
+{"r": 1, "n": "KERB Social Club", "a": "Spitalfields", "mi": 1.1, "yr": "2026 listing", "line": "Book a table with a wings platter, with street food from Only Jerkin and several big screens.", "pros": ["Bookable table with a wings platter", "Street food traders", "Several big screens"], "cons": ["Entry £10 to £20 in 2026 guides; table price not found", "Finish time not found"], "ask": "Table price, finish time, and how many a table seats.", "pr": "£10 to £20", "pb": "a", "prd": "Entry £10 to £20 in 2026 (Time Out; Shortlist said from £20). The price of the table with a wings platter wasn’t published.", "seat": 1},
+{"r": 2, "n": "The Dial", "a": "Greenwich", "mi": 3.9, "yr": "2026 listing", "line": "Its 2026 Super Bowl night was £10 to £11 with a lager or pint, from 8pm, with a £35 wings sharing platter. It also lists an NFL watch party every Sunday up to 14 February 2027.", "pros": ["13 screens", "£10 to £11 with a lager or pint in 2026", "£35 wings sharing platter in 2026", "NFL watch party listed through 14 Feb 2027"], "cons": ["Far from your hotel", "Seating not stated"], "ask": "Whether 14 February is a ticketed Super Bowl night, whether tickets hold seats, and the closing time.", "pr": "£10 with a lager", "pb": "g", "prd": "£10 per person including a Dial Lager pint in 2026 (£11 with the booking fee), from 8pm. The £35 ‘All I do is Wing’ sharing platter was an optional extra.", "price": 1},
+{"r": 3, "n": "Box Piccadilly", "a": "West End", "mi": 2.1, "yr": "2026 listing", "line": "A 33-screen sports bar with free entry and 250 seats out of 550.", "pros": ["33 screens", "Free entry", "250 seats of 550", "Burgers, pizza, sharers"], "cons": ["Seat not promised", "Closing time unconfirmed", "DJ warm-up early on"], "ask": "Whether a booking holds a table, and when it closes.", "pr": "Free", "pb": "g", "prd": "Free entry in 2026, booking strongly advised (Time Out). No ticket price.", "price": 1},
+{"r": 4, "n": "Bermondsey Bierkeller", "a": "Tooley St", "mi": 0.1, "yr": "2026 listing", "line": "Seated tickets with two-pint steins, multiple screens, wings, burgers and nachos. A few minutes from London Bridge.", "pros": ["Seated tickets with two-pint steins", "Multiple screens", "Wings, burgers and nachos", "Walk back to your hotel"], "cons": ["About £35 a ticket last year, over your £15 limit (currency unclear in one source)", "Closing time not found"], "ask": "This year’s ticket price, closing time, and whether seats are held all night.", "pr": "About £35", "pb": "r", "prd": "One guide listed tickets at 35 in 2026. Its German page shows euros, so it is probably £35. Seated tickets included two-pint steins. The venue’s own page wouldn’t load.", "seat": 1},
+{"r": 5, "n": "Long Arm", "a": "Liverpool St", "mi": 1.3, "yr": "2026 listing", "line": "A brewery taproom with free entry, own-brewed beer, smash burgers and wings.", "pros": ["Free", "Own-brewed beer", "Smash burgers and wings"], "cons": ["Seats and screen count not stated", "Booking advised"], "ask": "Number of screens, whether booking holds a table, closing time.", "pr": "Free", "pb": "g", "prd": "Free in 2026, booking advised (Time Out).", "price": 1},
+{"r": 6, "n": "Greenwood", "a": "Victoria", "mi": 2.5, "yr": "2026 listing", "line": "An official NFL partner over two floors, free to enter, with 19 screens on one listing.", "pros": ["Official NFL partner", "Two floors", "Free", "19 screens on one listing"], "cons": ["Seats not stated (a 2022 seated tier cost £25 minimum spend)", "Cheerleader appearances"], "ask": "Whether a free booking holds a seat, and the closing time.", "pr": "Free", "pb": "g", "prd": "Free in 2026, booking strongly advised (Time Out). Earlier years were ticketed: £10 to £30 in 2022 and from £11 in 2019.", "price": 1},
+{"r": 7, "n": "The Bridge Tap", "a": "Borough High St", "mi": 0.2, "yr": "2026 listing", "line": "A pub beside London Bridge with craft beer, sharing boards and pub grub.", "pros": ["Beside London Bridge", "Craft beer", "Sharing boards and pub grub"], "cons": ["Generic listing", "No price, seat or hours info"], "ask": "Whether it’s taking Super Bowl bookings, and until when it’s open.", "pr": "No ticket price", "pb": "x", "prd": "DesignMyNight listed table bookings only, with no ticket price (May 2026)."},
+{"r": 8, "n": "The Minories", "a": "Aldgate", "mi": 0.7, "yr": "2026 listing", "line": "A traditional pub with ales, wings and sharers.", "pros": ["Traditional pub", "Ales", "Wings and sharers"], "cons": ["Generic listing", "No seat, price or hours detail"], "ask": "Whether it’s taking Super Bowl bookings, and its hours.", "pr": "No ticket price", "pb": "x", "prd": "DesignMyNight listed table bookings only, with no ticket price (May 2026)."},
+{"r": 9, "n": "The Shoreditch Arms", "a": "Shoreditch, formerly Bar Kick", "mi": 1.4, "yr": "2026 listing", "line": "A sport-focused pub with several screens, burgers and fried chicken.", "pros": ["Sport-focused, multiple screens", "Burgers and fried chicken"], "cons": ["Capacity, price and seating not found"], "ask": "Whether there’s a Super Bowl booking and whether it holds seats.", "pr": "No ticket price", "pb": "x", "prd": "DesignMyNight listed table bookings only, with no ticket price (May 2026)."},
+{"r": 10, "n": "Hippodrome", "a": "Leicester Sq", "mi": 1.9, "yr": "2026 listing", "line": "A casino open 24/7 with a sportsbook bar, many screens, burgers and wings.", "pros": ["Open 24/7", "Sportsbook bar with many screens", "Burgers and wings"], "cons": ["Casino setting", "Seating and price unknown", "The 2025 setup was one 10m screen"], "ask": "Which room shows the game, and whether seats can be reserved.", "pr": "No ticket price", "pb": "x", "prd": "DesignMyNight listed it with no booking or ticket price (May 2026).", "late": 1},
+{"r": 11, "n": "100 Wardour Street", "a": "Soho", "mi": 2.1, "yr": "2026 listing", "line": "In 2026 tickets started at £40 for a reserved seat, a drink and a food item. It was open 7pm to 4am, with DJs, bands and cheerleaders.", "pros": ["Reserved seat in every ticket", "Open 7pm to 4am", "5m screen plus multiple screens"], "cons": ["From £40 a head last year (£43.20 with fees), well over your £15 limit", "Live music and cheerleaders, so more party than sports bar"], "ask": "Whether it runs again in 2027, and the ticket tiers.", "pr": "£40 to £110", "pb": "r", "prd": "2026: £40 limited-time ticket (reserved seat, a drink and a food item; £43.20 with fees), £70 standard, £110 VIP. 2025 was £30, £60 and £90.", "seat": 1, "late": 1},
+{"r": 12, "n": "Blues Kitchen", "a": "Shoreditch (nearest)", "mi": 1.3, "yr": "2026 listing", "line": "A £6 table booking, live bands and American plates, but it closes at 1:30am.", "pros": ["£6 table booking", "Live bands", "American plates"], "cons": ["Closes 1:30am, before the game ends", "Party-bar feel"], "ask": "Whether the 1:30am close still applies.", "pr": "£6 table booking", "pb": "g", "prd": "£6 per person to book a table in 2026 (DesignMyNight).", "seat": 1, "price": 1},
+{"r": 13, "n": "TOCA Social", "a": "Greenwich", "mi": 3.9, "yr": "2026 listing", "line": "Tables facing the big screen, lagers and dips in the ticket, open to 3am.", "pros": ["Tables facing the big screen", "Lagers and dips in the ticket", "Open to 3am"], "cons": ["From £22, over your limit", "One screen", "Far"], "ask": "Whether a cheaper ticket exists.", "pr": "From £22", "pb": "a", "prd": "From £22 in 2026 (Time Out). In 2023 a table of four was £80, which is £20 a head.", "seat": 1, "late": 1},
+{"r": 14, "n": "American Bar, The Stafford", "a": "St James’s", "mi": 2.2, "yr": "2026 listing", "line": "Last year it was a £65 ticketed night, from 10pm until the game finished, with a Tito’s shot, a baseball cap, cocktails and light snacks.", "pros": ["Open until the game finishes", "Table booked in advance", "Quiet hotel bar"], "cons": ["£65 a head, non-refundable, far over your limit", "Up to 6 guests a booking, and seating allocated by the venue"], "ask": "Whether it repeats in 2027, and the price.", "pr": "£65", "pb": "r", "prd": "£65 per person in 2026, paid in advance and non-refundable, maximum 6 guests a booking.", "seat": 1, "late": 1},
+{"r": 15, "n": "Clapham Grand", "a": "Clapham", "mi": 4.6, "yr": "2026 listing", "line": "Seated tickets include beer and wings, in front of a 25ft screen.", "pros": ["Seated tickets include beer and wings", "25ft screen"], "cons": ["Party-led", "Sold out by game week", "Last entry 10pm", "Mostly one screen"], "ask": "When tickets go on sale.", "pr": "From £20", "pb": "a", "prd": "From £20 in 2026 (£23.10 with fees); seated tickets included beer and wings. In 2025 it was from £21.43.", "seat": 1},
+{"r": 16, "n": "40ft Brewery", "a": "Blackhorse Rd", "mi": 6.0, "yr": "2026 listing", "line": "£5 with a pint, open to 4am, on one big screen.", "pros": ["£5 with a pint", "Open to 4am"], "cons": ["Far", "One big screen", "Hot dogs only", "Probably standing"], "ask": "Whether there are any seats.", "pr": "£5 with a pint", "pb": "g", "prd": "£5 to get in with a free pint in 2026 (London On The Inside).", "price": 1, "late": 1}
+];
+var H=[
+{"id": "hD", "l": "D", "rk": 1, "n": "Travelodge Bermondsey", "a": "67–71 Tanner St, SE1 3PL", "mi": 0.5, "band": "g", "p": "From £46 to £56 depending on the site.", "t": "Reviewers describe a walk of about 10 minutes to London Bridge station. Best fit for your budget and walk."},
+{"id": "hG", "l": "G", "rk": 2, "n": "Travelodge Central Southwark", "a": "202–206 Union St, SE1 0LX", "mi": 0.7, "band": "g", "p": "From £40.", "t": "Two minutes from Southwark tube. Sources disagree on the distance to London Bridge, so the walk may be longer than 0.7 miles."},
+{"id": "hF", "l": "F", "rk": 3, "n": "Travelodge Central Tower Bridge", "a": "1 Goodmans Yard, E1 8AT", "mi": 0.7, "band": "g", "p": "From £45.", "t": "Next to Tower Hill and Tower Gateway stations."},
+{"id": "hE", "l": "E", "rk": 4, "n": "Travelodge Central Elephant and Castle", "a": "Ceramic Building, 87 Newington Causeway, SE1 6DH", "mi": 0.8, "band": "g", "p": "From £40 to £65 depending on the site.", "t": "Cheapest, but the longest walk back at 3am."},
+{"id": "hA", "l": "A", "rk": 5, "n": "Premier Inn Southwark (Bankside)", "a": "34 Park St, SE1 9EF", "mi": 0.3, "band": "r", "p": "From £69. Sunday nights in Oct and Nov 2026 were £90 to £112.", "t": "Five minutes’ walk to Borough Market. Its lowest price is £69, but the Sunday rates seen this autumn were over £70, so it probably goes over."},
+{"id": "hB", "l": "B", "rk": 6, "n": "Premier Inn Southwark (Borough High St)", "a": "135 Borough High St, SE1 1NP", "mi": 0.4, "band": "a", "p": "Around £79 from one site, which didn’t state its currency. Another sample showed $138.", "t": "Described as within a 10-minute walk of London Bridge. Price is low confidence."},
+{"id": "hC", "l": "C", "rk": 7, "n": "Premier Inn Tower Bridge", "a": "159 Tower Bridge Rd, SE1 3LP", "mi": 0.5, "band": "a", "p": "From £83 on Premier Inn’s own listing. KAYAK’s January average was £112.", "t": "Breakfast buffet £11.99 per adult on one site."},
+{"id": "hH", "l": "H", "rk": 8, "n": "Premier Inn Bank (Tower)", "a": "20 St Mary at Hill, EC3R 8EE", "mi": 0.4, "band": "r", "p": "From £90.", "t": "About an 11-minute walk to London Bridge station on one site."}
+];
+var LY={
+1:["2026: you could book an entry ticket, a table with a platter of wings, or a private room (London On The Inside).", "2026: entry quoted at £10 to £20 across guides, and from £20 on Shortlist.", "The same room at the 2026 World Cup: Clubhouse seating up to 160, eight large screens, and England games from £12 including a welcome drink. That is not Super Bowl pricing (ON IN LONDON, Alt Sports).", "Now trading as KERB Sports Bar at 4 Horner Square (DesignMyNight)."],
+2:["2026: £10 ticket from 8pm including a Dial lager; £35 wings sharing platter; halftime show shown in full with the sound up (Greenwich Peninsula and DesignMyNight).", "NFL watch party every Sunday from 13 Sept 2026 to 14 Feb 2027, tickets from £5.50 (Visit Greenwich, DesignMyNight)."],
+3:["2026: free entry, 33 screens, 250 seats out of 550 (Time Out).", "2026: popcorn chicken, smash burgers and truffle mushroom pizzas (DesignMyNight)."],
+4:["2026: seated tickets included two-pint steins (London On The Inside).", "2026: ticket price listed as 35 on Business Traveller’s guide. Its German page shows euros, so it is probably £35, which is over your £15 limit."],
+5:["2026: free, booking advised; own-brewed beer, smash burgers, fries and wings (Time Out)."],
+6:["2026: free entry, booking strongly advised (Time Out).", "2026: 19 screens and gourmet bar snacks (DesignMyNight)."],
+7:["2026: bright, airy bar with craft beer, cocktails and pub grub (DesignMyNight). No price or seating detail was listed."],
+8:["2026: small plates, wings, big sharers and burgers; ales and craft beer (DesignMyNight). No price or seating detail was listed."],
+9:["2026: foosball table; chicken schnitzel, sausage and mash, smash burgers (DesignMyNight). No Super Bowl price was listed."],
+10:["2026: Paddy’s Sportsbook bar with countless screens; burgers, wings and fries (DesignMyNight).", "2025: Lola’s Underground with a 10m screen, open 24/7 (Time Out)."],
+11:["2026: £40 limited-time ticket (entry, reserved seat, a drink and a food item), £70 standard (two drinks and two food items) and £110 VIP. £43.20 and £74.20 with booking fees on DesignMyNight.", "2026: open 7pm to 4am, with DJs and bands to warm up and cheerleaders during the game. It was the second year running.", "2025: £30, £60 and £90 tiers, open 8pm to 4am. Menu: beef burger and chips, Korean fried chicken wings and chips, veggie burger, hot dog and chips (DesignMyNight)."],
+12:["2026: table bookings £6 per person (DesignMyNight).", "2026: bars and kitchens closed at 1:30am (Time Out)."],
+13:["2026: tickets from £22, with tables facing the screen, open to 3am (Time Out).", "2025: plenty of tables in front of the big screen, or a private box for up to 20 (Time Out)."],
+14:["2026: £65 per person, paid in advance and non-refundable. Tickets were valid from 10pm until the game finished, with a maximum of 6 guests a booking, one Tito’s shot and one baseball cap each, and tables and seating allocated by the venue (The Stafford).", "2026: cocktails and light bar snacks including a New York Happy Meal (The Stafford). Shortlist described it as more Super Bowl party than sports bar."],
+15:["2026: tickets from £20; seated tickets included beer and wings; 25ft screen, confetti cannons and cheerleaders (London On The Inside, Business Traveller).", "2026: last entry 10pm, no re-admittance, and it sold out by game week (venue page).", "2025: from £21.43 (Time Out)."],
+16:["2026: £5 to get in with a free pint, open to 4am, hot dogs from Walthamstow Dogs (London On The Inside)."]
+};
+var CATS=[{"t": "Overall", "b": "My best fit for your whole brief: a seat, sharing food, price, not party-led, and near your hotel.", "items": [[1, "A bookable table with a wings platter, plus street food. Entry £10 to £20 last year, and a short trip from London Bridge."], [2, "£10 with a lager last year, a sharing wings platter, and an NFL watch party listed up to 14 February. It’s far from your hotel."], [3, "Free entry, 33 screens and 250 seats. A seat isn’t promised."]]}, {"t": "Best value", "b": "Free or cheap entry with the most included, from last year’s prices.", "items": [[3, "Free entry, 33 screens and 250 seats."], [2, "£10 with a lager last year, with a £35 sharing platter on offer."], [6, "Free entry, 19 screens, and an official NFL partner."]]}, {"t": "Best for a guaranteed seat", "b": "Venues that sold a seat or a table last year. Prices are shown because they vary a lot.", "items": [[11, "A reserved seat came with every ticket, from £40 last year. More party than sports bar."], [4, "Seated tickets with two-pint steins, about £35 last year."], [1, "A bookable table with a wings platter. Price not found."]]}, {"t": "Best food", "b": "Sharing plates and wings, from last year’s menus.", "items": [[1, "Street food traders and a wings platter for the table."], [2, "A £35 sharing platter of BBQ wings and tenders with fries."], [4, "Wings, burgers and nachos."]]}, {"t": "Open latest", "b": "Late hours confirmed in last year’s listings.", "items": [[10, "Open 24 hours."], [16, "Open to 4am, £5 with a pint. One screen, and far out."], [11, "Open 7pm to 4am, but from £40 and party-led."]]}, {"t": "Closest to London Bridge", "b": "Straight-line miles from the station, approximate.", "items": [[4, "About 0.1 miles."], [7, "About 0.2 miles. Little detail on price or seats."], [8, "About 0.7 miles. Small plates, wings and sharers."]]}];
+function vByRank(r){return V.filter(function(v){return v.r===r})[0]}
+var catOn=new Set([0]);
+function renderCats(){
+  $("#catchips").innerHTML=CATS.map(function(c,i){
+    var on=catOn.has(i);
+    return '<button class="chipbtn" aria-pressed="'+on+'" data-act="cat" data-cat="'+i+'">'+c.t+'</button>';
+  }).join('')+'<button class="chipbtn ghost" data-act="cat-all">Show all</button><button class="chipbtn ghost" data-act="cat-none">Hide all</button>';
+  var html=CATS.map(function(c,ci){
+    if(!catOn.has(ci))return '';
+    return '<section class="cat" aria-label="'+c.t+'"><h3>'+c.t+'</h3><p class="cb">'+c.b+'</p>'+
+      c.items.map(function(it,i){
+        var v=vByRank(it[0]);
+        return '<button class="cit" data-act="open-venue" data-id="v'+v.r+'"><span class="num">'+(i+1)+'</span><span><strong>'+v.n+'</strong><span class="why">'+it[1]+'</span></span></button>';
+      }).join('')+'</section>';
+  }).join('');
+  $("#cats").innerHTML=html||'<div class="empty">No list switched on. Tap a box above to see its top three.</div>';
+}
+var CHK_VENUE=[
+{id:"c1",t:"Does a booking hold a seat or a table for the whole night, or only entry?"},
+{id:"c2",t:"Is there a last entry time, and can you leave and come back?"},
+{id:"c3",t:"When do the bar and kitchen close? The game should finish around 3am."},
+{id:"c4",t:"What’s the cancellation policy if plans change?"}
+];
+var CHK_TODO=[
+{id:"t1",t:"Check the top three venues’ pages for 2027 listings"},
+{id:"t2",t:"Confirm the ticket or booking price is £15 or less each"},
+{id:"t3",t:"Check Travelodge Bermondsey’s price for Sunday 14 February"},
+{id:"t4",t:"Choose a flexible rate for the hotel if one is offered"},
+{id:"t5",t:"Plan the walk back from the venue after about 3am"}
+];
+
+var mem={};
+function load(k,d){try{var v=localStorage.getItem(k);if(v!==null)return JSON.parse(v)}catch(e){}return mem[k]!==undefined?mem[k]:d}
+function save(k,v){mem[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+
+var stars=new Set(load("sb27:stars",[]));
+var checks=load("sb27:checks",{});
+var openV=new Set();
+var filt={walk:0,seat:0,price:0,late:0};
+var sortBy="fit";
+var u70=false;
+var TABS=["plan","venues","map","hotels","checklist"];
+
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function vid(v){return "v"+v.r}
+function tierOf(r){return r<=4?"t-gold":r<=10?"t-silver":"t-bronze"}
+function vcls(mi){return mi<=1.5?"g":mi<=3?"b":mi<=5?"a":"r"}
+function hcls(mi){return mi<=0.4?"g":mi<=0.6?"b":"a"}
+function vchip(mi){return '<span class="c '+vcls(mi)+'">'+mi.toFixed(1)+' mi</span>'}
+function hchip(mi){return '<span class="c '+hcls(mi)+'">'+mi.toFixed(1)+' mi</span>'}
+function persistStars(){save("sb27:stars",Array.from(stars))}
+
+function showTab(name,noScroll){
+  if(TABS.indexOf(name)<0)name="plan";
+  TABS.forEach(function(t){
+    var on=t===name,b=$("#tab-"+t);
+    b.setAttribute("aria-selected",on?"true":"false");
+    b.tabIndex=on?0:-1;
+    $("#panel-"+t).hidden=!on;
+  });
+  var b2=$("#tab-"+name);
+  if(b2.scrollIntoView){try{b2.scrollIntoView({inline:"center",block:"nearest"})}catch(e){}}
+  if(!noScroll){var h=$("header");window.scrollTo(0,h.offsetTop+h.offsetHeight)}
+}
+
+function renderVenues(){
+  var list=V.filter(function(v){
+    if(filt.walk&&!(v.mi<1.5))return false;
+    if(filt.seat&&!v.seat)return false;
+    if(filt.price&&!v.price)return false;
+    if(filt.late&&!v.late)return false;
+    return true;
+  });
+  if(sortBy==="near")list.sort(function(a,b){return a.mi-b.mi||a.r-b.r});
+  else list.sort(function(a,b){return a.r-b.r});
+  $("#vcount").textContent="Showing "+list.length+" of "+V.length+" venues";
+  if(!list.length){$("#vlist").innerHTML='<div class="empty">No venue matches all of those filters. Turn one off to see more.</div>';return}
+  $("#vlist").innerHTML=list.map(function(v){
+    var id=vid(v),op=openV.has(id),sv=stars.has(id);
+    return '<article class="vc" id="vc-'+id+'">'+
+      '<div class="vh">'+
+        '<button class="vtoggle" aria-expanded="'+op+'" aria-controls="vp-'+id+'" data-act="toggle" data-id="'+id+'">'+
+          '<span class="rk '+tierOf(v.r)+'">'+v.r+'</span>'+
+          '<span class="vm"><strong>'+v.n+'</strong><span class="ar">'+v.a+', '+v.yr+'</span></span>'+
+          '<span class="chips2">'+vchip(v.mi)+'<span class="c p'+v.pb+'">'+v.pr+'</span></span><span class="chev" aria-hidden="true">'+(op?'▲':'▼')+'</span>'+
+        '</button>'+
+        '<button class="savebtn" aria-pressed="'+sv+'" aria-label="'+(sv?'Remove ':'Save ')+v.n+(sv?' from':' to')+' shortlist" data-act="star" data-id="'+id+'">'+(sv?'Saved':'Save')+'</button>'+
+      '</div>'+
+      '<div class="vp" id="vp-'+id+'"'+(op?'':' hidden')+'>'+
+        '<p class="line">'+v.line+'</p>'+'<div class="pbox pb-'+v.pb+'"><h4>Price last year</h4><p>'+v.prd+'</p></div>'+(LY[v.r]?'<div class="ly"><h4>From last year’s listings, not confirmed for 2027</h4><ul>'+LY[v.r].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>':'')+
+        '<div class="pc"><div><h4>Pros</h4><ul>'+v.pros.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>'+
+        '<div><h4>Cons</h4><ul>'+v.cons.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div></div>'+
+        '<p class="ask"><strong>Ask:</strong> '+v.ask+'</p>'+
+      '</div></article>';
+  }).join("");
+}
+
+var BAND={g:"Under £70",a:"£70 to £89",r:"£90 and over"};
+function renderHotels(){
+  var list=H.filter(function(h){return u70?h.band==="g":true});
+  $("#u70btn").setAttribute("aria-pressed",u70?"true":"false");
+  $("#hcount").textContent="Showing "+list.length+" of "+H.length+" hotels, ranked for one room under £70 near London Bridge";
+  $("#hlist").innerHTML=list.map(function(h){
+    var sv=stars.has(h.id);
+    return '<article class="hc" id="hc-'+h.id+'">'+
+      '<div class="hh"><span class="rk hb-'+h.band+'" aria-hidden="true">'+h.rk+'</span><strong>'+h.n+'</strong>'+hchip(h.mi)+'</div>'+
+      '<div class="addr">Map pin '+h.l+', '+h.a+'</div>'+
+      '<p><span class="c '+(h.band==="g"?"g":h.band==="a"?"a":"r")+'">'+BAND[h.band]+'</span>'+(h.band==="g"?'':' <span class="c x">Over £70</span>')+'</p>'+
+      '<p><strong>Price seen:</strong> '+h.p+'</p>'+
+      '<p>'+h.t+'</p>'+
+      '<div class="actions"><button class="btn" aria-pressed="'+sv+'" data-act="star" data-id="'+h.id+'">'+(sv?'Saved':'Save')+'</button></div>'+
+    '</article>';
+  }).join("");
+}
+
+function renderShort(){
+  var items=[];
+  V.forEach(function(v){if(stars.has(vid(v)))items.push({id:vid(v),n:v.n,chip:vchip(v.mi),type:"v"})});
+  H.forEach(function(h){if(stars.has(h.id))items.push({id:h.id,n:h.n,chip:hchip(h.mi),type:"h"})});
+  var el=$("#shortlist");
+  if(!items.length){el.innerHTML='<div class="empty">Nothing saved yet. Tap Save on any venue or hotel and it will appear here.</div>';return}
+  el.innerHTML='<ul class="short">'+items.map(function(i){
+    return '<li><span class="nm">'+i.n+'</span>'+i.chip+
+      '<button class="btn" data-act="'+(i.type==="v"?"open-venue":"open-hotel")+'" data-id="'+i.id+'">View</button>'+
+      '<button class="btn" data-act="star" data-id="'+i.id+'">Remove</button></li>';
+  }).join("")+'</ul>';
+}
+
+function renderChecks(){
+  function build(list,el){
+    $(el).innerHTML=list.map(function(c){
+      return '<li><label><input type="checkbox" data-check="'+c.id+'"'+(checks[c.id]?' checked':'')+'><span>'+c.t+'</span></label></li>';
+    }).join("");
+  }
+  build(CHK_VENUE,"#chk-venue");
+  build(CHK_TODO,"#chk-todo");
+}
+
+function refresh(){renderVenues();renderHotels();renderShort()}
+
+function openVenue(id){
+  filt={walk:0,seat:0,price:0,late:0};
+  $$('[data-act="filter"]').forEach(function(b){b.setAttribute("aria-pressed","false")});
+  openV.add(id);
+  renderVenues();
+  showTab("venues",true);
+  var el=document.getElementById("vc-"+id);
+  if(el)el.scrollIntoView({block:"start"});
+}
+function openHotel(id){
+  var h=H.filter(function(x){return x.id===id})[0];
+  if(u70&&h&&h.band!=="g")u70=false;
+  renderHotels();
+  showTab("hotels",true);
+  var el=document.getElementById("hc-"+id);
+  if(el)el.scrollIntoView({block:"start"});
+}
+
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-act]");
+  if(!t)return;
+  var a=t.getAttribute("data-act"),id=t.getAttribute("data-id");
+  if(a==="tab")showTab(t.getAttribute("data-tab"));
+  else if(a==="toggle"){if(openV.has(id))openV.delete(id);else openV.add(id);renderVenues();var tg=$('[data-act="toggle"][data-id="'+id+'"]');if(tg)tg.focus()}
+  else if(a==="star"){var sec=t.closest("section");if(stars.has(id))stars.delete(id);else stars.add(id);persistStars();refresh();var nb=sec&&sec.querySelector('[data-act="star"][data-id="'+id+'"]');if(nb)nb.focus()}
+  else if(a==="filter"){var f=t.getAttribute("data-f");filt[f]=filt[f]?0:1;t.setAttribute("aria-pressed",filt[f]?"true":"false");renderVenues()}
+  else if(a==="sort"){sortBy=t.getAttribute("data-s");$$('[data-act="sort"]').forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false")});renderVenues()}
+  else if(a==="u70"){u70=!u70;renderHotels()}
+  else if(a==="cat"){var ci=parseInt(t.getAttribute("data-cat"),10);if(catOn.has(ci))catOn.delete(ci);else catOn.add(ci);renderCats();var cb=$('[data-act="cat"][data-cat="'+ci+'"]');if(cb)cb.focus()}
+  else if(a==="cat-all"){CATS.forEach(function(c,i){catOn.add(i)});renderCats()}
+  else if(a==="cat-none"){catOn.clear();renderCats()}
+  else if(a==="open-venue")openVenue(id);
+  else if(a==="open-hotel")openHotel(id);
+});
+document.addEventListener("keydown",function(e){
+  var tab=e.target.closest&&e.target.closest('[role="tab"]');
+  if(tab&&(e.key==="ArrowRight"||e.key==="ArrowLeft")){
+    var i=TABS.indexOf(tab.getAttribute("data-tab"));
+    i=(i+(e.key==="ArrowRight"?1:TABS.length-1))%TABS.length;
+    showTab(TABS[i],true);
+    $("#tab-"+TABS[i]).focus();
+  }
+});
+document.addEventListener("change",function(e){
+  var c=e.target.getAttribute&&e.target.getAttribute("data-check");
+  if(c){checks[c]=e.target.checked;save("sb27:checks",checks)}
+});
+
+renderChecks();
+renderCats();
+refresh();
+function fromHash(){
+  var h=(location.hash||"").replace("#","");
+  if(TABS.indexOf(h)>=0)showTab(h,true);
+}
+fromHash();
+window.addEventListener("hashchange",fromHash);
+})();
+</script>
+</body>
+</html>
